@@ -1,0 +1,134 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Skills</title>  
+    <style>  
+        body {  
+            background-color: #ff8c00; /* Bright orange background */  
+            font-family: Arial, sans-serif;  
+            color: #fff;  
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+            flex-direction: column;  
+            height: 100vh;  
+            margin: 0;  
+        }  
+        h1 {  
+            margin-bottom: 20px;  
+            font-size: 36px;  
+            text-align: center;  
+        }  
+        .skills-container {  
+            display: flex;  
+            flex-wrap: wrap; /* Allow wrapping to the next line */  
+            justify-content: center;  
+            width: 80%;  
+            gap: 20px; /* Space between boxes */  
+        }  
+        .skill-box {  
+            background-color: #2980b9; /* Box color */  
+            border-radius: 10px;  
+            width: calc(25% - 20px); /* Adjust width for 4 boxes per row */  
+            text-align: center;  
+            padding: 20px;  
+            position: relative; /* Positioning for the circle */  
+        }  
+        .skill-image {  
+            width: 70px; /* Image size */  
+            height: 70px; /* Image size */  
+            border-radius: 50%; /* Create a circle */  
+            margin-bottom: 10px;  
+            display: block; /* Ensure block display */  
+            margin-left: auto; /* Center horizontally */  
+            margin-right: auto; /* Center horizontally */  
+        }  
+        .rounded-rectangle {  
+            background-color: #fff; /* Rounded rectangle background */  
+            color: #000; /* Black text */  
+            padding: 10px 15px;  
+            border-radius: 20px; /* Rounded corners */  
+            display: inline-block; /* Fit text */  
+            margin-top: -10px; /* Pull up rectangle closer to the image */  
+            font-weight: bold; /* Bold font */  
+        }  
+        .btn {  
+            margin-top: 20px; /* Space above Go Back button */  
+            padding: 10px 20px;  
+            border: none;  
+            border-radius: 5px;  
+            background-color: #27ae60;  
+            color: white;  
+            cursor: pointer;  
+            transition: background-color 0.3s;  
+        }  
+        .btn:hover {  
+            background-color: #219653;  
+        }  
+    </style>  
+</head>  
+<body>  
+
+    <h1>Skills</h1>  
+    <div class="skills-container">  
+        <div class="skill-box">  
+            <img src="python.jpg.png" alt="Python" class="skill-image"> <!-- Replace with your image path -->  
+            <div class="rounded-rectangle">Python</div>  
+        </div>  
+        <div class="skill-box">  
+            <img src="c.jpg" alt="C" class="skill-image">  
+            <div class="rounded-rectangle">C</div>  
+        </div>  
+        <div class="skill-box">  
+            <img src="java.jpg" alt="Java" class="skill-image">  
+            <div class="rounded-rectangle">Java</div>  
+        </div>  
+        <div class="skill-box">  
+            <img src="machinelearning.jpg" alt="ML" class="skill-image">  
+            <div class="rounded-rectangle">ML</div>  
+        </div>  
+        <div class="skill-box">  
+            <img src="ai.jpg" alt="AI" class="skill-image">  
+            <div class="rounded-rectangle">AI</div>  
+        </div>  
+        <div class="skill-box">  
+            <img src="da.jpg" alt="Data Analysis" class="skill-image">  
+            <div class="rounded-rectangle">Data Analytics</div>  
+        </div>  
+        <div class="skill-box">  
+            <img src="fe.jpg" alt="Front End" class="skill-image">  
+            <div class="rounded-rectangle">Front End</div>  
+        </div>  
+        <div class="skill-box">  
+            <img src="be.jpg" alt="Back End" class="skill-image">  
+            <div class="rounded-rectangle">Back End</div>  
+        </div>  
+        <div class="skill-box">  
+            <img src="cs.jpg.crdownload" alt="Communication" class="skill-image">  
+            <div class="rounded-rectangle">Communication Skills</div>  
+        </div>  
+        <div class="skill-box">  
+            <img src="problemsolving.jpg" alt="Problem Solving" class="skill-image">  
+            <div class="rounded-rectangle">Problem Solving</div>  
+        </div>  
+        <div class="skill-box">  
+            <img src="canva.jpg.crdownload" alt="Canva" class="skill-image">  
+            <div class="rounded-rectangle">Canva</div>  
+        </div>  
+        <div class="skill-box">  
+            <img src="dsa.jpg" alt="Data Structures" class="skill-image">  
+            <div class="rounded-rectangle">Data Structure</div>  
+        </div>  
+    </div>  
+    <button class="btn" onclick="goBack()">Go Back</button>  
+
+    <script>  
+        function goBack() {  
+            window.history.back();  
+        }  
+    </script>  
+
+</body>  
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>About Me</title>  
+    <style>  
+        body {  
+            margin: 0;  
+            font-family: Arial, sans-serif;  
+            background-color: #ff5e7b;  
+            color: #fff;  
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+            height: 100vh;  
+            overflow: hidden;  
+            opacity: 1;  
+            transition: opacity 0.8s ease-in-out;  
+        }  
+        body.fade-out {  
+            opacity: 0;  
+        }  
+        .container {  
+            text-align: center;  
+            padding: 20px;  
+            border-radius: 15px;  
+            background-color: #ff2e66;  
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);  
+        }  
+        h1 {  
+            font-size: 48px;  
+            margin-bottom: 20px;  
+        }  
+        .card-container {  
+            display: flex;  
+            justify-content: center;  
+            flex-wrap: wrap;  
+            margin-bottom: 20px;  
+        }  
+        .card {  
+            width: 150px;  
+            height: 200px;  
+            background-color: white;  
+            border-radius: 10px;  
+            margin: 15px;  
+            padding: 10px;  
+            color: #000;  
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  
+            position: relative;  
+            text-align: center;  
+            transition: transform 0.3s ease, box-shadow 0.3s ease;  
+        }  
+        .card:hover {  
+            transform: scale(1.1);  
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);  
+        }  
+        .card-icon {  
+            font-size: 40px;  
+        }  
+        .description {  
+            font-size: 16px;  
+            padding-top: 10px;  
+        }  
+        .back-button {  
+            margin-top: 30px;  
+            border: none;  
+            border-radius: 5px;  
+            background-color: #00bfff;  
+            color: white;  
+            padding: 10px 20px;  
+            font-size: 16px;  
+            cursor: pointer;  
+            transition: background-color 0.3s;  
+        }  
+        .back-button:hover {  
+            background-color: #0099cc;  
+        }  
+    </style>  
+</head>  
+<body>  
+
+<div class="container">  
+    <h1>ABOUT ME</h1>  
+
+    <div class="card-container">  
+        <div class="card">  
+            <div class="card-icon">🌼</div>  
+            <div class="description">I'm Survi Mukherjee</div>  
+        </div>  
+
+        <div class="card">  
+            <div class="card-icon">💻</div>  
+            <div class="description">Passionate software developer</div>  
+        </div>  
+
+        <div class="card">  
+            <div class="card-icon">📚</div>  
+            <div class="description">Specialized in languages like C, Python, Java</div>  
+        </div>  
+
+        <div class="card">  
+            <div class="card-icon">💃</div>  
+            <div class="description">Along with coding, I enjoy dancing</div>  
+        </div>  
+
+        <div class="card">  
+            <div class="card-icon">🌟</div>  
+            <div class="description">Third-year student at Dr. B.C. Roy Engineering College</div>  
+        </div>  
+
+        <div class="card">  
+            <div class="card-icon">🤖</div>  
+            <div class="description">Have expertise in AI, ML, and data analytics</div>  
+        </div>  
+    </div>  
+
+    <button class="back-button" onclick="goBack()">Go back to Home Page</button>  
+</div>  
+
+<script>  
+    document.querySelector('.back-button').addEventListener('click', function (event) {  
+        event.preventDefault();  
+        document.body.classList.add('fade-out');  
+        setTimeout(() => {  
+            window.location.href = 'index.html';  
+        }, 800);  
+    });  
+</script>  
+
+</body>  
+</html>

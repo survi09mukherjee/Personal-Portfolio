@@ -1,0 +1,155 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Projects Page</title>  
+    <style>  
+        body {  
+            background-color: #041f5c; /* Deep blue background */  
+            font-family: Arial, sans-serif;  
+            color: #333;  
+            margin: 0;  
+            padding: 20px;  
+            text-align: center; /* Center align content */  
+        }  
+        h1 {  
+            font-size: 3em;  
+            color: #fff; /* White color for the title */  
+            margin-bottom: 20px;  
+        }  
+        .projects-container {  
+            display: flex;  
+            justify-content: center; /* Center the project columns */  
+            position: relative;  
+            margin-bottom: 40px; /* Space between project section and button */  
+        }  
+        .project-column {  
+            display: flex;  
+            flex-direction: column;  
+            align-items: center;  
+            margin: 20px; /* Added margin between the columns */  
+        }  
+        .project-box {  
+            background-color: #FFFFFF; /* White boxes */  
+            border-radius: 15px; /* Slightly rounder corners */  
+            padding: 50px; /* Increased padding for larger boxes */  
+            width: 250px; /* Bigger box size */  
+            margin: 20px 0; /* Increased margin */  
+            text-align: center;  
+            transition: transform 0.3s;  
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth effect */  
+            text-decoration: none; /* Remove underline from links */  
+            color: black; /* Text color */  
+            animation: pendulum 2s infinite alternate; /* Pendulum effect */  
+        }  
+        .project-box:hover {  
+            transform: rotate(360deg); /* Rotate 360 degrees on hover */  
+        }  
+
+        @keyframes pendulum {  
+            0% { transform: rotate(10deg); }  
+            100% { transform: rotate(-10deg); }  
+        }  
+
+        /* Attractive Center Styling */  
+        .center-area {  
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */  
+            border-radius: 25px; /* Rounded corners for the container */  
+            padding: 50px; /* Padding for the container */  
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow for depth effect */  
+            max-width: 800px; /* Max width of the center area */  
+            margin: 0 auto; /* Center the container */  
+            position: relative; /* Relative positioning for further adjustments if needed */  
+            overflow: hidden; /* Clip overflow */  
+        }  
+
+        .go-home {  
+            background-color: #6a11cb; /* Purple */  
+            color: white;  
+            padding: 15px 25px;  
+            border: none;  
+            border-radius: 5px;  
+            cursor: pointer;  
+            margin-top: 20px;  
+            font-size: 1.2em;  
+            transition: background-color 0.3s;  
+            display: block;  
+            width: 200px;  
+            margin-left: auto;  
+            margin-right: auto;  
+        }  
+        .go-home:hover {  
+            background-color: #2575fc; /* Blue on hover */  
+        }  
+
+        /* Hidden video container initially */
+        .video-container {
+            display: none;
+            margin-top: 30px;
+            text-align: center;
+        }
+        video {
+            width: 80%; /* Video takes up most of the screen width */
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>  
+</head>  
+<body>  
+
+<h1>Projects</h1>  
+
+<div class="center-area">  
+    <div class="projects-container">  
+        <div class="project-column">  
+            <a href="sl.mp4" onclick="showVideo('sapphire')" class="project-box">✨ Sapphire Lands- React Website</a>  
+            <a href="sts.mp4" onclick="showVideo('trafficSentinels')" class="project-box">🚦 Smart Traffic Sentinels using Yolo and Easy OCR</a>  
+            <a href="javascript:void(0);" class="project-box">✋ Sanket Hand Gesture Detection</a>
+        </div>  
+        <div class="project-column">  
+            <div class="project-box">☁️ Face Emotion Detection using AI</div>  
+            <div class="project-box">🐍 Hand Written Digit Recognition using AI</div>  
+            <div class="project-box">📖 Some Mini Projects</div>  
+        </div>  
+    </div>  
+</div>  
+
+<!-- Video containers (hidden initially) -->
+<div id="sapphireVideo" class="video-container">
+    <video controls>
+        <source src="sl.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<div id="trafficSentinelsVideo" class="video-container">
+    <video controls>
+        <source src="sts.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<button class="go-home" onclick="goHome()">Go Back to Home Page</button>  
+
+<script>  
+    function goHome() {  
+        window.location.href = 'index.html'; // Replace with the actual home page URL  
+    }  
+
+    function showVideo(project) {
+        // Hide all videos initially
+        document.getElementById('sapphireVideo').style.display = 'none';
+        document.getElementById('trafficSentinelsVideo').style.display = 'none';
+
+        // Show the selected video
+        if (project === 'sapphire') {
+            document.getElementById('sapphireVideo').style.display = 'block';
+        } else if (project === 'trafficSentinels') {
+            document.getElementById('trafficSentinelsVideo').style.display = 'block';
+        }
+    }
+</script>  
+
+</body>  
+</html>

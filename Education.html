@@ -1,0 +1,111 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Education Details</title>  
+    <style>  
+        body {  
+            background-color: #ff69b4; /* Pink background */  
+            font-family: Arial, sans-serif;  
+            color: #fff;  
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+            height: 100vh;  
+            margin: 0;  
+        }  
+        .container {  
+            width: 80%; /* Set overall width */  
+            display: flex;  
+            flex-direction: column;  
+            align-items: center;  
+        }  
+        h1 {  
+            margin-bottom: 20px;  
+            font-size: 36px;  
+            text-align: center;  
+        }  
+        .education-boxes {  
+            display: flex; /* Arrange boxes in a horizontal line */  
+            justify-content: space-between;  
+            width: 100%;  
+            gap: 20px;  
+        }  
+        .education-box {  
+            background-color: #2980b9; /* Box color */  
+            border-radius: 10px;  
+            width: 30%; /* Width of each box */  
+            text-align: center;  
+            padding: 20px;  
+            position: relative;  
+        }  
+        .education-box img {  
+            width: 100px; /* Fixed size for circular images */  
+            height: 100px; /* Fixed size for circular images */  
+            border-radius: 50%; /* Circular image */  
+            border: 5px solid #fff; /* White border around the image */  
+            object-fit: cover; /* Ensure the image covers the circle */  
+            margin-bottom: 15px;  
+        }  
+        .education-box h3 {  
+            margin: 10px 0;  
+            font-weight: bold; /* Bold font for titles */  
+        }  
+        .education-box p {  
+            margin: 5px 0;  
+            font-size: 14px; /* Normal font size */  
+        }  
+        .italic {  
+            font-style: italic; /* Italic style for years */  
+        }  
+        .btn {  
+            margin-top: 20px; /* Space above Go Back button */  
+            padding: 10px 20px;  
+            border: none;  
+            border-radius: 5px;  
+            background-color: #27ae60;  
+            color: white;  
+            cursor: pointer;  
+            transition: background-color 0.3s;  
+        }  
+        .btn:hover {  
+            background-color: #219653;  
+        }  
+    </style>  
+</head>  
+<body>  
+
+    <div class="container">  
+        <h1>Education Details</h1>  
+        <div class="education-boxes">  
+            <div class="education-box">  
+                <img src="CARMEL.JPG" alt="Carmel School">  
+                <h3>Carmel School, Durgapur</h3>  
+                <p class="italic">CISCE (Council for the Indian School Certificate Examinations)</p>  
+                <p class="italic">2012 - 2020</p>  
+            </div>  
+            <div class="education-box">  
+                <img src="DAV.JPG" alt="DAV School">  
+                <h3>DAV MODEL School, Durgapur</h3>  
+                <p class="italic">CBSE (Central Board of Secondary Education)</p>  
+                <p class="italic">2020 - 2022</p>  
+            </div>  
+            <div class="education-box">  
+                <img src="BCREC.JPG" alt="B.C. Roy Engineering College">  
+                <h3>Dr. B.C. Roy Engineering College, Durgapur</h3>  
+                <p class="italic">B.Tech in Computer Science and Engineering</p>  
+                <p class="italic">2022 - 2026</p>  
+            </div>  
+        </div>  
+        <button class="btn" onclick="goBack()">Go Back</button>  
+    </div>  
+
+    <script>  
+        function goBack() {  
+            window.history.back();  
+        }  
+    </script>  
+
+</body>  
+</html>

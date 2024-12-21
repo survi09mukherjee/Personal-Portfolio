@@ -1,0 +1,243 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Portfolio Home Page</title>  
+    <style>  
+        body {  
+            background: linear-gradient(to right, #6a11cb, #2575fc);  
+            font-family: Arial, sans-serif;  
+            color: #fff;  
+            display: flex;  
+            flex-direction: column;  
+            align-items: center;  
+            justify-content: center;  
+            height: 100vh;  
+            margin: 0;  
+            opacity: 1;  
+            transition: opacity 0.8s ease-in-out;  
+        }  
+        body.fade-out {  
+            opacity: 0;  
+        }  
+        .container {  
+            text-align: center;  
+        }  
+        img {  
+            width: 200px;  
+            height: auto;  
+            border-radius: 10%;  
+            margin-bottom: 20px;  
+            animation: morph 4s infinite alternate; /* Morphing effect */  
+        }  
+        @keyframes morph {  
+            0% {  
+                transform: scale(1);  
+                border-radius: 10%;  
+            }  
+            50% {  
+                transform: scale(1.1);  
+                border-radius: 50%;  
+            }  
+            100% {  
+                transform: scale(1);  
+                border-radius: 10%;  
+            }  
+        }  
+        .name-box {  
+            background-color: rgba(255, 255, 255, 0.2);  
+            padding: 20px;  
+            border-radius: 10px;  
+            margin: 20px 0;  
+            font-size: 30px;  
+            font-weight: bold;  
+            text-shadow: 0 0 5px #fff,   /* White glow */  
+                         0 0 10px #fff,  /* White glow */  
+                         0 0 15px #6a11cb, /* Blue glow */  
+                         0 0 20px #6a11cb; /* Stronger blue glow */  
+            color: #fff; /* Base text color */  
+        }  
+        .typing-animation {  
+            font-size: 26px;  
+            font-weight: bold;  
+            white-space: nowrap;  
+            overflow: hidden;  
+            border-right: 4px solid #fff;  
+            width: 0;  
+            animation: typing 4s steps(30) forwards, blink-caret 0.75s step-end infinite;  
+            animation-delay: 1s;  
+        }  
+        @keyframes typing {  
+            from { width: 0; }  
+            to { width: 100%; }  
+        }  
+        @keyframes blink-caret {  
+            from, to { border-color: transparent; }  
+            50% { border-color: #fff; }  
+        }  
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px red; }
+            50% { text-shadow: -2px -2px blue; }
+            100% { text-shadow: 2px -2px green; }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .description {  
+            font-size: 18px;  
+            margin: 20px 0;  
+            opacity: 0.9;  
+            animation: typing 5s steps(50) forwards;  
+            animation-delay: 5s;  
+            white-space: nowrap;  
+            overflow: hidden;  
+            border-right: 4px solid #fff;  
+            width: 0;  
+        }  
+        .buttons {  
+            display: flex;  
+            flex-wrap: wrap;  
+            justify-content: center;  
+            margin-top: 20px;  
+        }  
+        .button {  
+            color: #fff;  
+            padding: 15px 25px;  
+            margin: 10px;  
+            border: none;  
+            border-radius: 5px;  
+            cursor: pointer;  
+            transition: opacity 0.3s;  
+        }  
+
+        .button.violet {  
+            background-color: #950319; /* Violet */  
+        }  
+        .button.indigo {  
+            background-color: #4B0082; /* Indigo */  
+        }  
+        .button.blue {  
+            background-color: #09437c; /* Blue */  
+        }  
+        .button.green {  
+            background-color: #32CD32; /* Green */  
+        }  
+        .button.yellow {  
+            background-color: #aa951d; /* Yellow */  
+        }  
+        .button.orange {  
+            background-color: #ef9426; /* Orange */  
+        }  
+        .button.red {  
+            background-color: #FF4500; /* Red */  
+        }  
+        .button:hover {  
+            opacity: 0.8;  
+        }  
+        .hidden-link {  
+            text-decoration: none;  
+            color: inherit;  
+        }  
+
+        footer {  
+            margin-top: 40px;  
+            font-size: 16px;  
+            text-align: center;  
+            padding: 10px;  
+            background-color: rgba(255, 255, 255, 0.2);  
+            border-radius: 10px;  
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  
+            color: #fff;  
+        }  
+    </style>  
+</head>  
+<body>  
+
+<div class="container">  
+    <img src="survi.jpg" alt="Survi">  
+    <div class="name-box">Survi Mukherjee</div>  
+    <div class="typing-animation">Welcome to my Portfolio!</div>  
+    <div class="description">I am a passionate coder dedicated to creating innovative solutions.</div>  
+    
+    <div class="buttons">  
+        <button class="button violet"><a href="about.html" class="hidden-link">About Me</a></button>  
+        <button class="button indigo"><a href="projects.html" class="hidden-link">Projects</a></button>  
+        <button class="button blue"><a href="https://github.com/survi09mukherjee" class="hidden-link">GitHub</a></button>  
+        <button class="button green"><a href="contact.html" class="hidden-link">Contact</a></button>  
+        <button class="button yellow"><a href="Hobby.html" class="hidden-link">Hobbies</a></button>  
+        <button class="button orange"><a href="language.html" class="hidden-link">Languages Known</a></button>  
+        <button class="button red"><a href="Education.html" class="hidden-link">Education</a></button>    
+        <button class="button indigo"><a href="Skills.html" class="hidden-link">Skills</a></button>  
+        <button class="button blue"><a href="https://www.linkedin.com/in/survi-mukherjee-8302272a3" class="hidden-link">LinkedIn</a></button>  
+    </div>  
+</div>  
+
+<footer>  
+    Dr. B.C. Roy Engineering College, 2026 | CSI & dCode@IT InnoVenture EXPO - 2nd Position | Member of Google Developers Group (GDG) Durgapur | Passionate about Machine Learning | Full-Stack Developer | Tech Enthusiast  
+</footer>  
+<script>
+    document.querySelectorAll('a').forEach(anchor => {
+        anchor.addEventListener('click', function (event) {
+            const target = this.href;
+            const buttonText = this.textContent.trim();
+            event.preventDefault();
+
+            if (buttonText === 'About Me') {
+                // Sliding effect for About Me
+                document.body.style.transition = 'transform 0.8s ease-in-out';
+                document.body.style.transform = 'translateX(-100vw)'; // Slide out to the left
+            } else if (buttonText === 'Education') {
+                // Sliding effect for Education
+                document.body.style.transition = 'transform 0.8s ease-in-out';
+                document.body.style.transform = 'translateX(100vw)'; // Slide out to the right
+            } else if (buttonText === 'Projects') {
+                document.body.style.transition = 'transform 0.8s ease-in-out';
+                document.body.style.transform = 'rotateY(180deg)';
+            } else if (buttonText === 'Certificates') {
+                document.body.style.transition = 'transform 0.8s ease-in-out';
+                document.body.style.transform = 'scale(0)';
+            } else if (buttonText === 'GitHub') {
+                // New effect for GitHub: Diagonal tilt and scale (same as LinkedIn)
+                document.body.style.transition = 'transform 0.8s ease-in-out';
+                document.body.style.transform = 'rotateX(20deg) rotateY(-20deg) scale(1.1)';
+            } else if (buttonText === 'LinkedIn') {
+                // New effect for LinkedIn: Diagonal tilt and scale
+                document.body.style.transition = 'transform 0.8s ease-in-out';
+                document.body.style.transform = 'rotateX(20deg) rotateY(-20deg) scale(1.1)';
+            } else if (buttonText === 'Contact') {
+                document.body.style.transition = 'transform 0.8s ease-in-out, box-shadow 0.8s ease-in-out';
+                document.body.style.transform = 'scale(1.1)';
+                document.body.style.boxShadow = '0 20px 30px rgba(0, 0, 0, 0.3)';
+            } else if (buttonText === 'Skills') {
+                // New effect for Skills: Spin and scale
+                document.body.style.transition = 'transform 1s ease-in-out';
+                document.body.style.transform = 'rotate(360deg) scale(1.1)';
+            } else if (buttonText === 'Language') {
+                document.body.style.transition = 'transform 0.8s ease-in-out';
+                document.body.style.animation = 'bounce 0.8s infinite';
+            } else if (buttonText === 'Hobbies') {
+                document.body.style.transition = 'transform 0.8s ease-in-out';
+                document.body.style.animation = 'pulse 0.8s infinite';
+            } else {
+                document.body.classList.add('fade-out');
+            }
+
+            setTimeout(() => {
+                window.location.href = target;
+            }, 800);
+        });
+    });
+</script>
+
+</body>  
+</html>

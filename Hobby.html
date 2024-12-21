@@ -1,0 +1,100 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Hobbies</title>  
+    <link rel="stylesheet" href="styles.css">  
+    <style>  
+        body {  
+            background: linear-gradient(to right, #6a11cb, #2575fc);  
+            font-family: Arial, sans-serif;  
+            color: #fff;  
+            display: flex;  
+            flex-direction: column;  
+            align-items: center;  
+            justify-content: center;  
+            height: 100vh;  
+            margin: 0;  
+        }  
+        h1 {  
+            margin-bottom: 20px;  
+            font-size: 36px;  
+            text-align: center;  
+        }  
+        .container {  
+            display: flex;  
+            justify-content: center;  
+            gap: 20px;  
+            padding: 20px;  
+        }  
+        .hobby-box {  
+            background-color: rgba(255, 255, 255, 0.2);  
+            border-radius: 10px;  
+            width: 200px;  
+            text-align: center;  
+            padding: 15px;  
+            transition: transform 0.3s;  
+        }  
+        .hobby-box img {  
+            width: 100%;  
+            height: auto;  
+            border-radius: 10px 10px 0 0;  
+        }  
+        .hobby-box:hover {  
+            transform: scale(1.05);  
+        }  
+        h3 {  
+            margin: 10px 0;  
+        }  
+        .btn {  
+            margin: 10px;  
+            padding: 10px 20px;  
+            border: none;  
+            border-radius: 5px;  
+            background-color: #32CD32; /* Green */  
+            color: white;  
+            cursor: pointer;  
+            transition: background-color 0.3s;  
+        }  
+        .btn:hover {  
+            background-color: #28a745; /* Darker Green */  
+        }  
+    </style>  
+</head>  
+<body>  
+
+    <h1>My Hobbies</h1>  
+    <div class="container">  
+        <div class="hobby-box">  
+            <img src="dance.jpg" alt="Dance">  
+            <h3>Dance</h3>  
+        </div>  
+        <div class="hobby-box">  
+            <img src="badminton.jpg" alt="Badminton">  
+            <h3>Badminton</h3>  
+        </div>  
+        <div class="hobby-box">  
+            <img src="basketball.jpg" alt="Basketball">  
+            <h3>Basketball</h3>  
+        </div>  
+        <div class="hobby-box">  
+            <img src="problemsolving.jpg" alt="Problem Solving">  
+            <h3>Problem Solving</h3>  
+        </div>  
+        <div class="hobby-box">  
+            <img src="cooking.jpg" alt="Cooking">  
+            <h3>Cooking</h3>  
+        </div>  
+    </div>  
+
+    <button class="btn" onclick="goBack()">Go Back</button>  
+
+    <script>  
+        function goBack() {  
+            window.history.back();  
+        }  
+    </script>  
+
+</body>  
+</html>
