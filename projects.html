@@ -82,18 +82,6 @@
         .go-home:hover {  
             background-color: #2575fc; /* Blue on hover */  
         }  
-
-        /* Hidden video container initially */
-        .video-container {
-            display: none;
-            margin-top: 30px;
-            text-align: center;
-        }
-        video {
-            width: 80%; /* Video takes up most of the screen width */
-            height: auto;
-            border-radius: 10px;
-        }
     </style>  
 </head>  
 <body>  
@@ -103,8 +91,8 @@
 <div class="center-area">  
     <div class="projects-container">  
         <div class="project-column">  
-            <a href="sl.mp4" onclick="showVideo('sapphire')" class="project-box">✨ Sapphire Lands- React Website</a>  
-            <a href="sts.mp4" onclick="showVideo('trafficSentinels')" class="project-box">🚦 Smart Traffic Sentinels using Yolo and Easy OCR</a>  
+            <a href="https://drive.google.com/file/d/1gsVZcQas04TjRb-z9MkILLeFOBcZfqPW/view?usp=drive_link" class="project-box">✨ Sapphire Lands- React Website</a>  
+            <a href="https://drive.google.com/file/d/13SN3EvJ0YwI8xD6cPP5-Hb2wIfV8rDR8/view?usp=drive_link" class="project-box">🚦 Smart Traffic Sentinels using Yolo and Easy OCR</a>  
             <a href="javascript:void(0);" class="project-box">✋ Sanket Hand Gesture Detection</a>
         </div>  
         <div class="project-column">  
@@ -115,40 +103,12 @@
     </div>  
 </div>  
 
-<!-- Video containers (hidden initially) -->
-<div id="sapphireVideo" class="video-container">
-    <video controls>
-        <source src="sl.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</div>
-
-<div id="trafficSentinelsVideo" class="video-container">
-    <video controls>
-        <source src="sts.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</div>
-
 <button class="go-home" onclick="goHome()">Go Back to Home Page</button>  
 
 <script>  
     function goHome() {  
         window.location.href = 'index.html'; // Replace with the actual home page URL  
     }  
-
-    function showVideo(project) {
-        // Hide all videos initially
-        document.getElementById('sapphireVideo').style.display = 'none';
-        document.getElementById('trafficSentinelsVideo').style.display = 'none';
-
-        // Show the selected video
-        if (project === 'sapphire') {
-            document.getElementById('sapphireVideo').style.display = 'block';
-        } else if (project === 'trafficSentinels') {
-            document.getElementById('trafficSentinelsVideo').style.display = 'block';
-        }
-    }
 </script>  
 
 </body>  
